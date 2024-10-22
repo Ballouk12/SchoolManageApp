@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:background="?android:attr/colorBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/parent"
+        android:padding="20dp">
+
+        <!-- Profile Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@android:drawable/ic_menu_gallery" />
+
+        <!-- Name and Prenom -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_alignTop="@+id/img"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom"
+                android:textColor="?android:textColorPrimary"
+                android:paddingEnd="8dp" /> <!-- Added padding for separation -->
+
+            <TextView
+                android:id="@+id/prenom"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prenom"
+                android:textColor="?android:textColorPrimary" />
+        </LinearLayout>
+
+        <!-- Sexe Label -->
+        <TextView
+            android:id="@+id/sexe_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="40dp"
+            android:text="Sexe:"
+            android:textColor="?android:textColorPrimary"
+            android:textStyle="bold" />
+
+        <!-- Sexe -->
+        <TextView
+            android:id="@+id/sexe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_toEndOf="@+id/sexe_label"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="40dp"
+            android:text="Male"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- Ville Label -->
+        <TextView
+            android:id="@+id/ville_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sexe_label"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="5dp"
+            android:text="Ville:"
+            android:textColor="?android:textColorPrimary"
+            android:textStyle="bold" />
+
+        <!-- Ville -->
+        <TextView
+            android:id="@+id/ville"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sexe_label"
+            android:layout_toEndOf="@+id/ville_label"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Ville"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- Hidden Student ID -->
+        <TextView
+            android:id="@+id/ids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/img"
+            android:text="Student ID"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

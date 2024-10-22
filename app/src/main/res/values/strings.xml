@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FBackProjects</string>
+    <array name="sexe">
+        <item>hommme</item>
+        <item>femme</item>
+    </array>
+</resources>
